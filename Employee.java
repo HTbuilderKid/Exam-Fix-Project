@@ -10,9 +10,9 @@ public class Employee{
     private boolean onLeave;
     private double hourlyWage;
     private double unpaidHours;
-    private int beforeTaxSalary;
-    private int taxes;
-    private int totalPay;
+    private double beforeTaxSalary;
+    private double taxes;
+    private double totalPay;
 
     public Employee(String fullname, int yearOfBirth, double hourlyWage){
         this.fullname = fullname;
