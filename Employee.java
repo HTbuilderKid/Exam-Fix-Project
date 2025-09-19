@@ -45,10 +45,12 @@ public class Employee{
     public boolean canDrive(){
         int age = calculateAge(2025);
         if(age >= 16) {
-            System.out.println("Old enough to drive.");
+            System.out.println(fullname + " is old enough to drive.");
+            return true;
         }
         else {
-            System.out.println("Not old enough to drive.");
+            System.out.println(fullname + " isn't old enough to drive.");
+            return false;
         }
     }
     
