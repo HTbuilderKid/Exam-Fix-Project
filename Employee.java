@@ -57,19 +57,19 @@ public class Employee{
     /*
      * Returns the net pay for the outstanding unpaid hours
      */
-    private double calculatePay(int totalPay){
-        beforeTaxSalary = (hourlyWage * unpaidHours);
-        taxes  = (beforeTaxSalary * 0.3);
-        totalPay = (beforeTaxSalary - taxes);
-        return (totalPay); 
+    private double calculatePay(){
+        beforeTaxSalary = hourlyWage * unpaidHours;
+        taxes  = beforeTaxSalary * 0.3;
+        totalPay = beforeTaxSalary - taxes;
+        return totalPay; 
     }
 
     /*
      * Output the payment record and resets unpaid hours
      */
-    public void paySalary(double calculatePay){
-        int pay = totalPay;
-        System.out.printf("#d has received a wire transfer of " + pay); ///+ pay);
+    public void paySalary(){
+        double pay = calculatePay();
+        System.out.printf(fullname + " has received a wire transfer of " + pay); ///+ pay);
         unpaidHours = 0;
     }
 }
