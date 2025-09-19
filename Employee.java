@@ -19,8 +19,21 @@ public class Employee{
         unpaidHours = 0.0;
     }
     
+    public boolean sickLeave(int leaveTime)
+    {
+        if onLeave = true;
+        System.out.prntln("The employee is on sick leave for " + leaveTime);
+    }
+    else {
+        System.out.println("The employee is still working.");
+    }
+    
+    private void isOnLeave() {
+        onLeave = true;
+    }
+    
     /**
-     * Returns true is an employee is above 16 years old
+     * Returns true if an employee is above 16 years old
      */
     private int calculateAge(int currentYear){
         return (currentYear - yearOfBirth);
@@ -31,20 +44,32 @@ public class Employee{
      */
     public boolean canDrive(){
         int age = calculateAge(2025);
-        // to be completed
+        if(age >= 16) {
+            System.out.println("Old enough to drive.");
+        }
+        else {
+            System.out.println("Not old enough to drive.");
+        }
     }
-
+    
     /*
      * Returns the net pay for the outstanding unpaid hours
      */
-    private double calculatePay(){
-        // to be completed
+    private double calculatePay(int totalPay){
+        beforeTaxSalary = (hourlyWage * unpaidHours);
+        taxes  = (beforeTaxSalary * 0.3);
+        totalPay = (beforeTaxSalary - taxes);
+        return (totalPay);
     }
 
     /*
      * Output the payment record and resets unpaid hours
      */
     public void paySalary(){
-        // to be completed
+        int pay = calculatePay(70);
+        System.out.printf("#d has received a wire transfer of " + pay);
+        unpaidHours = 0;
     }
+    
+    
 }
