@@ -55,6 +55,10 @@ public class Employee{
         }
     }
     
+    public void addUnpaidHours(double hours){
+        unpaidHours += hours;
+    }
+    
     /*
      * Returns the net pay for the outstanding unpaid hours
      */
