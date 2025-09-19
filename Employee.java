@@ -10,6 +10,9 @@ public class Employee{
     private boolean onLeave;
     private double hourlyWage;
     private double unpaidHours;
+    private int beforeTaxSalary;
+    private int taxes;
+    private int totalPay;
 
     public Employee(String fullname, int yearOfBirth, double hourlyWage){
         this.fullname = fullname;
@@ -19,17 +22,14 @@ public class Employee{
         unpaidHours = 0.0;
     }
     
-    public boolean sickLeave(int leaveTime)
+    public boolean onLeave(int leaveTime)
     {
-        if onLeave = true;
-        System.out.prntln("The employee is on sick leave for " + leaveTime);
-    }
-    else {
-        System.out.println("The employee is still working.");
-    }
-    
-    private void isOnLeave() {
-        onLeave = true;
+        if(onLeave = true) {
+            System.out.println("The employee is on sick leave for " + leaveTime);
+        }
+        else {
+            System.out.println("The employee is still working.");
+        }
     }
     
     /**
@@ -59,17 +59,15 @@ public class Employee{
         beforeTaxSalary = (hourlyWage * unpaidHours);
         taxes  = (beforeTaxSalary * 0.3);
         totalPay = (beforeTaxSalary - taxes);
-        return (totalPay);
+        return (totalPay); 
     }
 
     /*
      * Output the payment record and resets unpaid hours
      */
-    public void paySalary(){
-        int pay = calculatePay(70);
-        System.out.printf("#d has received a wire transfer of " + pay);
+    public void paySalary(double calculatePay){
+        int pay = totalPay;
+        System.out.printf("#d has received a wire transfer of " + pay); ///+ pay);
         unpaidHours = 0;
     }
-    
-    
 }
