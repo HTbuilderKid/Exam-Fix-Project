@@ -22,14 +22,13 @@ public class Employee{
         unpaidHours = 0.0;
     }
     
-    public boolean onLeave(int leaveTime)
+    public boolean onLeave()
     {
-        if(onLeave = true) {
-            System.out.println("The employee is on sick leave for " + leaveTime);
-        }
-        else {
-            System.out.println("The employee is still working.");
-        }
+        return onLeave;
+    }
+    
+    public void setOnLeave(boolean onLeave) {
+        this.onLeave = onLeave;
     }
     
     /**
